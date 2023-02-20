@@ -17,7 +17,7 @@ const Navbar = () => {
     setMenu(!menu);
   };
   return (
-    <nav className="navbar">
+    <nav className="navbar" >
       <div className="logo">
         <Link href={"/"}>
           <a>
@@ -29,7 +29,7 @@ const Navbar = () => {
         <Link href={"/shopping-cart"} passHref>
           <FontAwesomeIcon className="icon sb " icon={faBagShopping} />
         </Link>
-        <FontAwesomeIcon className="icon user" icon={faUser} />
+       
         {(menu === true || IsDesktopOrPhone === false) && (
           <div className="links ">
             <Link href={"/"}>

@@ -41,67 +41,301 @@ import { faTruckFast } from "@fortawesome/free-solid-svg-icons";
 import { faUserShield } from "@fortawesome/free-solid-svg-icons";
 import { faPen } from "@fortawesome/free-solid-svg-icons";
 
-import { useState,useContext } from "react";
+import { useState, useContext } from "react";
 import { CartContext } from "../../util/CartContext";
+import ItemSwiper from "../../components/swiper";
 
 const Details = () => {
   const { products, addToCart } = useContext(CartContext);
   const router = useRouter();
   const prodId = router.query.id;
   const dresses = [
-    { name: "Woman Dress", image: d22, price: "1000$", id: 22 },
-    { name: "Woman Dress", image: d23, price: "1000$", id: 23 },
-    { name: "Woman Dress", image: d24, price: "1000$", id: 24 },
-    { name: "Woman Dress", image: d25, price: "1000$", id: 25 },
-    { name: "Woman Dress", image: d26, price: "1000$", id: 26 },
-    { name: "Woman Dress", image: d28, price: "1000$", id: 28 },
-    { name: "Woman Dress", image: d29, price: "1000$", id: 29 },
-    { name: "Woman Dress", image: d30, price: "1000$", id: 30 },
-    { name: "Woman Dress", image: d1, price: "1000$", id: 1 },
-    { name: "Woman Dress", image: d2, price: "1000$", id: 2 },
-    { name: "Woman Dress", image: d3, price: "1000$", id: 3 },
-    { name: "Woman Dress", image: d4, price: "1000$", id: 4 },
-    { name: "Woman Dress", image: d5, price: "1000$", id: 5 },
-    { name: "Woman Dress", image: d6, price: "1000$", id: 6 },
-    { name: "Woman Dress", image: d7, price: "1000$", id: 7 },
-    { name: "Woman Dress", image: d8, price: "1000$", id: 8 },
-    { name: "Woman Dress", image: d9, price: "1000$", id: 9 },
-    { name: "Woman Dress", image: d10, price: "1000$", id: 10 },
-    { name: "Woman Dress", image: d11, price: "1000$", id: 11 },
-    { name: "Woman Dress", image: d12, price: "1000$", id: 12 },
-    { name: "Woman Dress", image: d13, price: "1000$", id: 13 },
-    { name: "Woman Dress", image: d14, price: "1000$", id: 14 },
-    { name: "Woman Dress", image: d15, price: "1000$", id: 15 },
-    { name: "Woman Dress", image: d16, price: "1000$", id: 16 },
-    { name: "Woman Dress", image: d17, price: "1000$", id: 17 },
-    { name: "Woman Dress", image: d18, price: "1000$", id: 18 },
-    { name: "Woman Dress", image: d19, price: "1000$", id: 19 },
-    { name: "Woman Dress", image: d20, price: "1000$", id: 20 },
-    { name: "Woman Dress", image: d21, price: "1000$", id: 21 },
-    { name: "Woman Dress", image: d31, price: "1000$", id: 31 },
-    { name: "Woman Dress", image: d32, price: "1000$", id: 32 },
-    { name: "Woman Dress", image: d33, price: "1000$", id: 33 },
-    { name: "Woman Dress", image: d34, price: "1000$", id: 34 },
-    { name: "Woman Dress", image: d35, price: "1000$", id: 35 },
-    { name: "Woman Dress", image: d36, price: "1000$", id: 36 },
-    { name: "Woman Dress", image: d27, price: "1000$", id: 27 },
+    {
+      name: "Woman Dress",
+      image: d22,
+      price: "1000$",
+      id: 22,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d23,
+      price: "1000$",
+      id: 23,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d24,
+      price: "1000$",
+      id: 24,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d25,
+      price: "1000$",
+      id: 25,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d26,
+      price: "1000$",
+      id: 26,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d28,
+      price: "1000$",
+      id: 28,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d29,
+      price: "1000$",
+      id: 29,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d30,
+      price: "1000$",
+      id: 30,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d1,
+      price: "1000$",
+      id: 1,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d2,
+      price: "1000$",
+      id: 2,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d3,
+      price: "1000$",
+      id: 3,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d4,
+      price: "1000$",
+      id: 4,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d5,
+      price: "1000$",
+      id: 5,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d6,
+      price: "1000$",
+      id: 6,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d7,
+      price: "1000$",
+      id: 7,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d8,
+      price: "1000$",
+      id: 8,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d9,
+      price: "1000$",
+      id: 9,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d10,
+      price: "1000$",
+      id: 10,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d11,
+      price: "1000$",
+      id: 11,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d12,
+      price: "1000$",
+      id: 12,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d13,
+      price: "1000$",
+      id: 13,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d14,
+      price: "1000$",
+      id: 14,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d15,
+      price: "1000$",
+      id: 15,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d16,
+      price: "1000$",
+      id: 16,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d17,
+      price: "1000$",
+      id: 17,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d18,
+      price: "1000$",
+      id: 18,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d19,
+      price: "1000$",
+      id: 19,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d20,
+      price: "1000$",
+      id: 20,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d21,
+      price: "1000$",
+      id: 21,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d31,
+      price: "1000$",
+      id: 31,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d32,
+      price: "1000$",
+      id: 32,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d33,
+      price: "1000$",
+      id: 33,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d34,
+      price: "1000$",
+      id: 34,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d35,
+      price: "1000$",
+      id: 35,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d36,
+      price: "1000$",
+      id: 36,
+      category: "women-dresses",
+    },
+    {
+      name: "Woman Dress",
+      image: d27,
+      price: "1000$",
+      id: 27,
+      category: "women-dresses",
+    },
   ];
 
+  const [size, setSize] = useState("");
+  const [errorMsg, setErrorMsg] = useState(false);
+
+  const addProductToCart = () => {
+    if (size) {
+      thisProduct.size = size;
+      addToCart(thisProduct);
+      router.push("/shopping-cart");
+    } else {
+      setErrorMsg(true);
+    }
+  };
+
   const thisProduct = dresses.find((dress) => dress.id == prodId);
+
+  console.log(thisProduct);
   return (
     <section id="product-details">
       <div className="product-details">
-        <div className="prod-img">
-          <Image
-            alt="image"
-            src={thisProduct.image}
-            width="600px"
-            height="600px"
-          ></Image>
-        </div>
+        {thisProduct?.image && (
+          <div className="prod-img">
+            <Image
+              alt="image"
+              src={thisProduct?.image}
+              width="500px"
+              height="600px"
+            ></Image>
+          </div>
+        )}
         <div className="prod-description">
-          <h2 className="prod-name">{thisProduct.name}</h2>
-          <p className="prod-price">Price : {thisProduct.price}</p>
+          <h2 className="prod-name">{thisProduct?.name}</h2>
+          <p className="prod-price">Price : {thisProduct?.price}</p>
           <div className="ratings">
             <FontAwesomeIcon icon={faPen} />
             <p>See reviews (32)</p>
@@ -109,14 +343,44 @@ const Details = () => {
           <div className="size">
             <h4 className="size-sel">Select size</h4>
             <div className="size-list">
-              <p>XS</p>
-              <p>S</p>
-              <p>M</p>
-              <p>L</p>
-              <p>XL</p>
+              <p
+                onClick={() => setSize("XS")}
+                className={size == "XS" ? "selected" : ""}
+              >
+                XS
+              </p>
+              <p
+                onClick={() => setSize("S")}
+                className={size == "S" ? "selected" : ""}
+              >
+                S
+              </p>
+              <p
+                onClick={() => setSize("M")}
+                className={size == "M" ? "selected" : ""}
+              >
+                M
+              </p>
+              <p
+                onClick={() => setSize("L")}
+                className={size == "L" ? "selected" : ""}
+              >
+                L
+              </p>
+              <p
+                onClick={() => setSize("XL")}
+                className={size == "XL" ? "selected" : ""}
+              >
+                XL
+              </p>
             </div>
+            {errorMsg && (
+              <div>
+                <p>Please choose a size!</p>
+              </div>
+            )}
           </div>
-          <button className="btn" onClick={() => addToCart(thisProduct)}>
+          <button className="btn" onClick={() => addProductToCart()}>
             Add to cart
           </button>
           <div className="prod-boxes">
@@ -173,6 +437,8 @@ const Details = () => {
           </div>
         </div>
       </div>
+      <h2 className="more-swiper-items-header">More to love</h2>
+      <ItemSwiper items={dresses} />
     </section>
   );
 };

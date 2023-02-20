@@ -1,7 +1,7 @@
 import bhb from "/img/bbk.jpg";
 import Image from "next/image";
-// import b1 from "/img/instElegant.jpg";
-// import b2 from "/img/menfas.jpg";
+import b1 from "/img/instElegant.jpg";
+import b2 from "/img/menfas.jpg";
 import b3 from "/img/WomensStyledOutfits.jpg";
 import b4 from "/img/womanCollection.jpg";
 import b5 from "/img/men-fashion.jpg";
@@ -57,7 +57,7 @@ const AllBlogs = () => {
     <section id="blog-posts">
       <div className="herobox">
         <Image
-         alt="image"
+          alt="image"
           className="hero-img"
           src={bhb}
           height="300px"
@@ -76,7 +76,12 @@ const AllBlogs = () => {
         {blogs.map((blog) => (
           <Link href={"/blogs/" + blog.id} key={blog.id} passHref>
             <div className="blog">
-              <Image  alt="image" src={blog.image} width="300px" height="300px"></Image>
+              <Image
+                alt="image"
+                src={blog.image}
+                width="300px"
+                height="300px"
+              ></Image>
               <div className="bk">
                 <h1 className="heading">{blog.title}</h1>
                 <div className="clicks">

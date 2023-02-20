@@ -10,7 +10,7 @@ import a9 from "/img/accesories9.jpg";
 import a10 from "/img/accesories10.jpg";
 import a11 from "/img/accesories11.jpg";
 import a12 from "/img/accesories12.jpg";
-import heroAccs from "/img/lady.jpg";
+import heroAccs from "/img/accesories-hero.jpg";
 import Image from "next/image";
 import Card from "../../components/card";
 import Link from "next/link";
@@ -35,10 +35,9 @@ const AllAccesories = () => {
       <section id="accesories">
         <div className="herobox">
           <Image
-           alt="image"
+            alt="image"
             className="hero-img"
-            height="700px"
-            width="500px"
+            height='700px'
             src={heroAccs}
           ></Image>
           <div className="text">

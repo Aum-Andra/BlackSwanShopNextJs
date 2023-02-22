@@ -1,7 +1,6 @@
 import bhb from "/img/bbk.jpg";
 import Image from "next/image";
-import b1 from "/img/instElegant.jpg";
-import b2 from "/img/menfas.jpg";
+
 import b3 from "/img/WomensStyledOutfits.jpg";
 import b4 from "/img/womanCollection.jpg";
 import b5 from "/img/men-fashion.jpg";

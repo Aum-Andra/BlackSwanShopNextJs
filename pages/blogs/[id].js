@@ -1,7 +1,5 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
-// import b1 from "/img/instElegant.jpg";
-// import b2 from "/img/menfas.jpg";
 import b3 from "/img/WomensStyledOutfits.jpg";
 import b4 from "/img/womanCollection.jpg";
 import b5 from "/img/men-fashion.jpg";
@@ -13,22 +11,6 @@ const Blog = () => {
   const blogId = router.query.id;
 
   const blogs = [
-    // {
-    //   title: "Fashion and Ettiquette",
-    //   image: b1,
-    //   body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus inventore dolores voluptatem! Rerum, exercitationem iure, architecto, quaerat dolorem quidem unde minus enim iusto incidunt illum iste quibusdam. Quis, voluptatum ad? Rem ipsam reprehenderit quo nesciunt? Labore fuga, cum aliquid voluptatum at repudiandae libero? Quia quod quaerat iusto iste officiis tenetur et debitis omnis ex nobis iure ut aspernatur vitae, est labore nihil totam animi voluptatem alias! Ad sed accusantium consequuntur praesentium dolorem optio enim incidunt iste voluptatem et veritatis, adipisci minus mollitia laboriosam neque provident magni eius inventore? Sint rerum quos corporis, a culpa delectus doloremque harum ullam quia veritatis minus odio, dolor eos, totam doloribus vero enim tempora modi minima mollitia consequatur soluta eveniet reiciendis accusantium? Aliquam veritatis temporibus, ad itaque ducimus praesentium eligendi sequi dolores suscipit totam quia vel placeat, nesciunt sed natus quas consectetur quibusdam possimus sint? Culpa omnis neque, voluptate inventore, debitis rerum odit quam odio atque ad quidem, suscipit harum voluptatum temporibus dolores incidunt dicta libero? Iusto enim ex unde sequi dicta numquam consequuntur quae nam assumenda adipisci, dolor labore, deleniti voluptatibus, magnam repellendus molestias eveniet maxime excepturi fugit delectus ad necessitatibus blanditiis facere libero. Velit, ad tenetur delectus impedit maxime ab odit a sunt.",
-    //   autor: "Jane Vixen",
-    //   id: 1,
-    //   imageA: authF,
-    // },
-    // {
-    //   title: "The gentleman guide",
-    //   image: b2,
-    //   body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus inventore dolores voluptatem! Rerum, exercitationem iure, architecto, quaerat dolorem quidem unde minus enim iusto incidunt illum iste quibusdam. Quis, voluptatum ad? Rem ipsam reprehenderit quo nesciunt? Labore fuga, cum aliquid voluptatum at repudiandae libero? Quia quod quaerat iusto iste officiis tenetur et debitis omnis ex nobis iure ut aspernatur vitae, est labore nihil totam animi voluptatem alias! Ad sed accusantium consequuntur praesentium dolorem optio enim incidunt iste voluptatem et veritatis, adipisci minus mollitia laboriosam neque provident magni eius inventore? Sint rerum quos corporis, a culpa delectus doloremque harum ullam quia veritatis minus odio, dolor eos, totam doloribus vero enim tempora modi minima mollitia consequatur soluta eveniet reiciendis accusantium? Aliquam veritatis temporibus, ad itaque ducimus praesentium eligendi sequi dolores suscipit totam quia vel placeat, nesciunt sed natus quas consectetur quibusdam possimus sint? Culpa omnis neque, voluptate inventore, debitis rerum odit quam odio atque ad quidem, suscipit harum voluptatum temporibus dolores incidunt dicta libero? Iusto enim ex unde sequi dicta numquam consequuntur quae nam assumenda adipisci, dolor labore, deleniti voluptatibus, magnam repellendus molestias eveniet maxime excepturi fugit delectus ad necessitatibus blanditiis facere libero. Velit, ad tenetur delectus impedit maxime ab odit a sunt.",
-    //   autor: "Michael Snow",
-    //   id: 2,
-    //   imageA: authM,
-    // },
     {
       title: "Models and Confidence",
       image: b3,
@@ -115,7 +97,7 @@ const Blog = () => {
           <div className="card-blog">
             <h3>Popular Posts</h3>
             <div>
-              <Image src={b1} alt="img" objectFit="cover" height="100px" />
+              <Image src={b5} alt="img" objectFit="cover" height="100px" />
             </div>
             <br />
             <div>

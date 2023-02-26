@@ -18,8 +18,8 @@ import i4 from "../img/instaPost6.jpg";
 import i5 from "../img/instaPost5.jpg";
 import i6 from "../img/instaPost4.jpg";
 
-// import b1 from "../img/instElegant.jpg";
-// import b2 from "../img/menFas.jpg";
+import b1 from "../img/mysterious.jpg";
+import b2 from "../img/men-lookout.jpg";
 
 import Link from "next/link";
 
@@ -137,7 +137,7 @@ export default function Home() {
         </div>
       </div>
       {/* from the blogs */}
-      {/* <div id="from-the-blog">
+      <div id="from-the-blog">
         <h1 className="heading">FROM THE BLOG</h1>
         <div className="from-the-blog-container">
           <Link href={"/blogs"} passHref>
@@ -169,7 +169,7 @@ export default function Home() {
             </div>
           </Link>
         </div>
-      </div> */}
+      </div>
       {/* follow-insta section */}
       <div id="follow-us">
         <h1 className="heading">FOLLOW US AT @INSTAGRAM</h1>

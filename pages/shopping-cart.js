@@ -16,6 +16,12 @@ function ShoppingCart() {
         </h5>
       </div>
 
+      {cart.length < 1 && (
+        <div className="no-product">
+          <p>No product added.</p>
+        </div>
+      )}
+
       <ul>
         {cart.map((product, index) => (
           <li className="Cart-Items" key={index}>

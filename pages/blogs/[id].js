@@ -97,7 +97,7 @@ const Blog = () => {
           <div className="card-blog">
             <h3>Popular Posts</h3>
             <div>
-              <Image src={b5} alt="img" objectFit="cover" height="100px" />
+              <Image src={b5} alt="img" objectFit="cover" height="800px" />
             </div>
             <br />
             <div>

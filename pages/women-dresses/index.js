@@ -89,7 +89,7 @@ const Dresses = () => {
     <section id="dresses">
       <div className="herobox">
         <Image alt="image" className="hero-img" src={heroDress}></Image>
-        <div className="text">
+        <div className="text text-small">
           <p>Black Swan</p>
           <h1>EXQUISITE </h1>
           <h1>

@@ -5,6 +5,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Mulish', sans-serif;
+  box-sizing: border-box;
   
 }
 h1,h2,h3{
@@ -27,12 +28,14 @@ a:hover{
 }
 
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 nav{
  
   height: 80px;
-  width: 100%;
+  width: 100vw;
   background-color: var(--light-color);
   display: flex;
   justify-content: space-between;
@@ -42,6 +45,7 @@ nav{
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   
 }
+
 nav .logo {
   width: 50px;
   height: 50px;
@@ -79,10 +83,11 @@ nav .links a:hover{
  display: flex;
  justify-content: space-around;
  align-items: center;
+ position: relative;
 
 }
 .actions .icon{
-  margin: 0 1rem;
+  margin: 0 0.2rem;
 }
 .actions .icon:hover{
   color: var(--primary-color);
@@ -91,8 +96,7 @@ nav .links a:hover{
 .menu-btn{
   display: none;
   position: absolute;
-  right: 10px;
-  top: 25px;
+  right: 10%;
   color: #6E050B;
   font-size: 18px;
 }
@@ -477,6 +481,7 @@ margin-top: 2rem;
   height: 200px;
   width: 100%;
   text-align: center;
+  padding-top: 100px;
   color: #2F3841;
  }
  .Cart-Items{
@@ -690,9 +695,15 @@ background-size: cover;
 /* small screen view */
 
 @media screen and (max-width:800px){
+  body{
+    width: 100%;
+    /* overflow-y: hidden; */
+    /* background-color: red;  */
+  }
   nav{
-    max-height: 70px;
-    
+    height: 10vh;
+    min-width: 500px;
+   
   }
   
   .links{
@@ -700,7 +711,7 @@ background-size: cover;
     height: auto;
     text-align: center;
     z-index: 1000000;
-    margin-top: 18rem;
+    margin-top: 20rem;
     
   }
 
@@ -714,14 +725,21 @@ background-size: cover;
     background-color: white;
     border: none;
     cursor: pointer;
+   
     
   }
   .actions{
     text-align: end;
+    width: 150px;
+
+   
+   
   }
-  .actions .icon{
-    margin-right: 3rem;
-  }
+  /* .actions .icon{
+   position: fixed;
+   top: 3.5%;
+
+  } */
 
   .actions .icon:hover{
     color: var(--primary-color);
@@ -729,6 +747,18 @@ background-size: cover;
 
  #homepage .text h1{
     font-size: 1.5rem;
+  }
+
+  .text h1{
+    margin: 0;
+    font-size: 2rem;
+  }
+   .text p{
+    color:var(--gray-color);
+    font-size:0.7rem;
+    opacity: .4;
+    padding: 0;
+    margin: 0;
   }
 
   .collections p{
@@ -755,7 +785,8 @@ content: '';
 top: 15%;
 left: 25%;
 color: white;
-margin-left: 2rem;}
+/* margin-left: 2rem; */
+}
 
  .collections .box-2{
 position: absolute;
@@ -763,11 +794,12 @@ content: '';
 top: 50%;
 left: 25%;
 color: white;
-margin-left: 2rem;}
+/* margin-left: 2rem; */
+}
 
  .collections .box-3{
 position: absolute;
-margin-left: 2rem;
+/* margin-left: 2rem; */
 content: '';
 bottom:10% ;
 left: 25%;
@@ -783,6 +815,28 @@ z-index: 10000000;
   }
  .product-details{
    display: block;
+ }
+
+ .product-details .prod-name{
+  padding: 1rem 0;
+ }
+ .product-details .prod-price{
+  padding: 1rem 0;
+ }
+ .product-details .ratings{
+  padding: 1rem 0;
+ }
+ .product-details .size{
+  padding: 1rem 0;
+ }
+ .product-details .prod-boxes{
+  padding: 1rem 0;
+ }
+ .product-details .prod-description-material{
+  padding: 2rem 0;
+ }
+ #contact{
+  overflow-y: hidden;
  }
  #contact .main .boxes{
    display: block;
@@ -800,14 +854,17 @@ z-index: 10000000;
   padding: 0 20px;
 }
  footer{
-   padding: 20px 10px;
+   padding: 30px 10px;
    display: block;
    min-width: 500px;
    height: 100%;
+   overflow: hidden;
  }
  footer .col-2{
 
    margin-right: 6rem;
+   margin-top:2rem ;
+   margin-bottom:2rem ;
  }
  .blog-body{
    max-width: 300px;
@@ -816,9 +873,15 @@ z-index: 10000000;
 
   
  }
- .blog-details {
-  height: 1700px;
+ #from-the-blog {
+  height: 100vh;
   min-width: 500px;
+  padding-bottom: 3rem;
+ 
+ }
+
+ #follow-us{
+  margin-top: 10rem;
  }
  section{
   margin: 0 auto;
@@ -826,6 +889,7 @@ z-index: 10000000;
 }
 .Cart-Container{
   margin:0 auto;
+  margin-left: 5%;
   width: 90%;
   min-height: 400px;
   background-color: #ffffff;
@@ -834,10 +898,38 @@ margin-top: 2rem;
   padding: 10px 20px;
  }
 
+
+ .Cart-Items{
+ padding: 2rem 0;
+ }
+ .Cart-Items .title{
+ padding: 1rem 0;
+ }
+ .Cart-Container .title{
+  font-size: 1rem;
+ }
+ .Cart-Container .subtitle{
+  font-size: 0.7rem;
+ }
+ .Cart-Container .amount{
+  font-size: 1rem;
+ }
+
  .leftcolumn, .rightcolumn {
   width: 100%;
   padding: 0;
 }
  
 
+}
+
+
+@media screen and (max-width:500px){
+
+  nav .menu-btn{
+    margin-top: 0.4rem;
+  }
+
+ 
+  
 }
